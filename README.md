@@ -1,7 +1,7 @@
 <h1>ToDo Web App</h1>
 <p>[see it in action!](www.google.com)</p>
 
-<h3>This is a basic web app ToDo List made with:<h3>
+<h3>This is a basic web app ToDo List made with:</h3>
 <ul>
   <li>HTML</li>
   <li>CSS</li>
