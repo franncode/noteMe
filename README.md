@@ -1,6 +1,6 @@
-# todo-list
+# ToDo Web
 
-Basic web app ToDo List
+This is a basic web app ToDo List
 
 We work with:
 * HTML
