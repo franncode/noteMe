@@ -1,4 +1,4 @@
-<h1 style="color: red">ToDo Web App</h1>
+<h1 style="color: red;">ToDo Web App</h1>
 <p>[see it in action!](www.google.com)</p>
 
 <h3>This is a basic web app ToDo List made with:</h3>
