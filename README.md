@@ -1,9 +1,10 @@
-# ToDo Web [see it in action!](www.google.com)
+<h1>ToDo Web App</h1>
+<p>[see it in action!](www.google.com)</p>
 
-### This is a basic web app ToDo List made with:
+<h3>This is a basic web app ToDo List made with:<h3>
 <ul>
   <li>HTML</li>
-⋅⋅* CSS
-⋅⋅* Vanilla JS
-⋅⋅* Bootstrap
-⋅⋅* Animate CSS
+  <li>CSS</li>
+  <li>Vanilla JS</li>
+  <li>Bootstrap</li>
+  <li>Animate CSS</li>
