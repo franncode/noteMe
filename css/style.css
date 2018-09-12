@@ -5,3 +5,9 @@ a, a:hover {
 .link {
     color: #6c757d;
 }
+
+.responsive {
+    width: 75%;
+    max-width: 600px;
+    height: auto;
+}
