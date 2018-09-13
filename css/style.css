@@ -16,7 +16,7 @@ a, a:hover {
     margin: 5%;
 }
 
-body {
+.appbody {
     background: #3336b3; /* Old browsers */
     background: -moz-linear-gradient(top, #3336b3 0%, #5b199e 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #3336b3 0%,#5b199e 100%); /* Chrome10-25,Safari5.1-6 */
