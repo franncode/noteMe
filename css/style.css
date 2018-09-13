@@ -1,4 +1,5 @@
-a, a:hover {
+a,
+a:hover {
     color: #a6c;
 }
 
@@ -16,19 +17,31 @@ a, a:hover {
     margin: 5%;
 }
 
-.body-app {
-    background: #3336b3; /* Old browsers */
-    background: -moz-linear-gradient(top, #3336b3 0%, #5b199e 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #3336b3 0%,#5b199e 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #3336b3 0%,#5b199e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3336b3', endColorstr='#5b199e',GradientType=0 ); /* IE6-9 */
+(degradado) {
+    background: #3336b3;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #3336b3 0%, #5b199e 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3336b3 0%, #5b199e 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3336b3 0%, #5b199e 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3336b3', endColorstr='#5b199e', GradientType=0);
+    /* IE6-9 */
     background-attachment: fixed;
 }
 
-.jumbotron-fluid {
-    background: white;
+.logobar {
+    width: 10%;
+    max-width: 100%;
+    height: auto;
 }
-.card-header {
-    color: #8385ee;
-    font-size: 150%
+
+.gradient-color {
+    background: linear-gradient(to bottom, #3336b3 0%, #5b199e 100%) !important; 
+}
+
+.second-color {
+    background: #5b199e;
+    color: white !important;
 }

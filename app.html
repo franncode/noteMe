@@ -17,64 +17,177 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="body-app">
+<body>
 
-    <div class="container">
+    <!--Section: Navigation-->
+    <header>
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark gradient-color scrolling-navbar">
+            <!-- <a class="navbar-brand" href="#"><img src="./img/logowhite.png" alt="logo" class="logobar"></a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <img src="./img/logowhite.png" alt="logo" class="navbar-brand logobar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Use It <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.github.com/franncode/noteMe">View on Github</a>
+                    </li>
+                </ul>
+                <!-- class="navbar-nav nav-flex-icons" -->
+            </div>
+        </nav>
+
+    </header>
+    <!--Section: Navigation-->
+
+    <!-- Section: Adding notes -->
+    <section class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 class="h2-responsive font-weight-bold text-center my-1">Add some notes </h2>
+        <form>
+
+            <!-- Grid row -->
+            <div class="form-row">
+
+                <!-- Grid column -->
+                <div class="col">
+                    <!-- Material input -->
+                    <div class="md-form">
+                        <input type="text" class="form-control" placeholder="Title">
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-9">
+                    <!-- Material input -->
+                    <div class="md-form">
+                        <input type="text" class="form-control" placeholder="Note">
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </form>
+    </section>
+    <!-- Section: Adding notes -->
+
+    <!-- Section: Notes -->
+    <section class="text-center my-5">
+        <!-- Grid row -->
         <div class="row">
-            <div class="col-sm-4">
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Note Title</div>
+
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Content -->
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+
+                        <!-- Title -->
+                        <h2 class="font-weight-bold my-4">Note title</h2>
+                        <!-- Body -->
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa pariatur
+                            id nobis accusamus deleniti cumque hic laborum.</p>
+                        <!-- Button -->
+                        <a class="btn second-color btn-rounded">Archive</a>
+
                     </div>
+                    <!-- Content -->
+
                 </div>
+                <!-- Card -->
+
             </div>
-            <div class="col-sm-4">
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                    <div class="card-header titlecard">Note Title</div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Content -->
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+
+                        <!-- Title -->
+                        <h2 class="font-weight-bold my-4">Note title</h2>
+                        <!-- Body -->
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa pariatur
+                            id nobis accusamus deleniti cumque hic laborum.</p>
+                        <!-- Button -->
+                        <a class="btn second-color btn-rounded">Archive</a>
+
                     </div>
+                    <!-- Content -->
+
                 </div>
+                <!-- Card -->
+
             </div>
-            <div class="col-sm-4">
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                    <div class="card-header titlecard">Note Title</div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-6">
+
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Content -->
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+
+                        <!-- Title -->
+                        <h2 class="font-weight-bold my-4">Note title</h2>
+                        <!-- Body -->
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa pariatur
+                            id nobis accusamus deleniti cumque hic laborum.</p>
+                        <!-- Button -->
+                        <a class="btn second-color btn-rounded">Archive</a>
+
                     </div>
+                    <!-- Content -->
+
                 </div>
+                <!-- Card -->
+
             </div>
+            <!-- Grid column -->
+
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Note Title</div>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                    <div class="card-header titlecard">Note Title</div>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <!-- Grid row -->
+
+    </section>
+    <!-- Section: Notes -->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small second-color fixed-bottom">
+
+        <!-- Text -->
+        <div class="footer-copyright text-center py-3">made by
+            <a href="https://www.github.com/franncode"> @franncode</a>
         </div>
-    </div>
+        <!-- Text -->
+
+    </footer>
+    <!-- Footer -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
