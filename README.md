@@ -1,6 +1,6 @@
 
 <img src="https://github.com/franncode/todo-webapp/blob/master/logo.png" alt="logo">
-:point_right: <a href="_blank">see it in action!</a>
+:point_right: <a href="http://franncode.github.io/noteMe">see it in action!</a>
 
 <h3>This is a basic web app to take notes made with:</h3>
 <ul>
