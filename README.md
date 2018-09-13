@@ -1,5 +1,6 @@
 
 <img src="https://github.com/franncode/todo-webapp/blob/master/logo.png" alt="logo">
+
 <h2>:point_right: <a href="http://franncode.github.io/noteMe">see it in action!</a></h2>
 
 
