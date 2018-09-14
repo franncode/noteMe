@@ -2,6 +2,10 @@
 let newNoteTitle = document.querySelector('#newNoteTitle');
 let newNoteBody = document.querySelector('#newNoteBody');
 let newNoteButton = document.querySelector('#newNoteButton');
+let newButtonCard = document.createElement('a')
+
+// Cards counter
+let cardNumber = 1
 
 // Last Row without 3 cards
 let rowSelectedIndex = 0
@@ -12,11 +16,14 @@ let animationCSS = 'bounce'
 // Post new note
 newNoteButton.addEventListener('click', noteCreator)
 
+// Delete note
+// newButtonCard.addEventListener('click', noteRemover)
+
 // Note creator
 function noteCreator() {
 
     // Check text input is not empty
-    if ((document.querySelector('#newNoteTitle').value !== '') && (document.querySelector('#newNoteBody').value !== '')) {
+    if ((document.querySelector('#newNoteTitle').value.length > 0) && (document.querySelector('#newNoteBody').value.length > 0)) {
 
         if (document.getElementsByClassName('card').length % 3 === 0) {
             // Create new Row
@@ -29,7 +36,9 @@ function noteCreator() {
         // Create new Col and put on exists Row
         var newCol = document.createElement('div')
         newCol.classList.add('col-lg-4', 'col-md-12', 'mb-lg-0', 'mb-4', 'col-notes')
-        document.getElementsByClassName(`row-notes-${rowSelectedIndex-1}`)[0].appendChild(newCol) 
+        newCol.id = `card-${cardNumber}`
+        document.getElementsByClassName(`row-notes-${rowSelectedIndex-1}`)[0].appendChild(newCol)
+        
 
         // Create new Card
         let newCard = document.createElement('div')
@@ -51,6 +60,14 @@ function noteCreator() {
         newBodyTextCard.classList.add('grey-text')
         newCardBody.appendChild(newBodyTextCard)
 
+        // Create new Button-Card and insider Icon
+        newButtonCard.classList.add('btn', 'second-color', 'btn-rounded')
+        newButtonCard.id = `button-${cardNumber}`
+        newCardBody.appendChild(newButtonCard)
+        let newIconButton = document.createElement('i')
+        newIconButton.classList.add('fas', 'fa-check', 'fa-lg')
+        newButtonCard.appendChild(newIconButton)
+
         // Reset text from form "Add some notes"
         document.querySelector('#newNoteTitle').value = ''
         document.querySelector('#newNoteBody').value = ''
@@ -64,5 +81,12 @@ function noteCreator() {
         }
         // Call func for animate the button
         animationClick()
-    }
+        cardNumber++
+    }   
+}
+
+function noteRemover() {
+    let cardNumberId = newButtonCard.id
+    document.removeChild(document.getElementById(`card-${parseInt(cardNumberId)}`))
+    // Add method remove to a button?
 }
