@@ -2,7 +2,6 @@
 let newNoteTitle = document.querySelector('#newNoteTitle');
 let newNoteBody = document.querySelector('#newNoteBody');
 let newNoteButton = document.querySelector('#newNoteButton');
-let newButtonCard = document.createElement('a')
 
 // Cards counter
 let cardNumber = 1
@@ -15,8 +14,18 @@ let animationCSS = 'bounce'
 
 // Post new note
 newNoteButton.addEventListener('click', noteCreator)
-newNoteTitle.addEventListener('keypress', noteCreator)
-newNoteBody.addEventListener('keypress', noteCreator)
+newNoteTitle.addEventListener('keypress', function (event) {
+    // Check that keypressed is Enter 
+    if (event.keyCode === 13) {
+        noteCreator()
+    }
+})
+newNoteBody.addEventListener('keypress', function (event) {
+    // Check that keypressed is Enter 
+    if (event.keyCode === 13) {
+        noteCreator()
+    }
+})
 
 // Delete note
 // newButtonCard.addEventListener('click', noteRemover)
@@ -34,13 +43,13 @@ function noteCreator() {
             document.querySelector('#notes').appendChild(newRow)
             rowSelectedIndex++
         }
-    
+
         // Create new Col and put on exists Row
         var newCol = document.createElement('div')
         newCol.classList.add('col-lg-4', 'col-md-12', 'mb-lg-0', 'mb-4', 'col-notes')
         newCol.id = `card-${cardNumber}`
         document.getElementsByClassName(`row-notes-${rowSelectedIndex-1}`)[0].appendChild(newCol)
-        
+
 
         // Create new Card
         let newCard = document.createElement('div')
@@ -63,6 +72,7 @@ function noteCreator() {
         newCardBody.appendChild(newBodyTextCard)
 
         // Create new Button-Card and insider Icon
+        let newButtonCard = document.createElement('a')
         newButtonCard.classList.add('btn', 'second-color', 'btn-rounded')
         newButtonCard.id = `button-${cardNumber}`
         newCardBody.appendChild(newButtonCard)
@@ -84,7 +94,7 @@ function noteCreator() {
         // Call func for animate the button
         animationClick()
         cardNumber++
-    }   
+    }
 }
 
 function noteRemover() {
