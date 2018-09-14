@@ -1,3 +1,4 @@
+// Cached relevant objects to create notes
 let newNoteTitle = document.querySelector('#newNoteTitle');
 let newNoteBody = document.querySelector('#newNoteBody');
 let newNoteButton = document.querySelector('#newNoteButton');
@@ -27,7 +28,7 @@ function noteCreator() {
         // Create new Col and put on exists Row
         var newCol = document.createElement('div')
         newCol.classList.add('col-lg-4', 'col-md-12', 'mb-lg-0', 'mb-4')
-        
+
         while (document.getElementsByClassName('row-notes')[i].getElementsByClassName('col-notes').length === 3) {
             rowEmpty++
         }
@@ -58,14 +59,13 @@ function noteCreator() {
     document.querySelector('#newNoteTitle').value = ''
     document.querySelector('#newNoteBody').value = ''
 
-    // Call func for animate the button
-    animationClick()
-}
-
-// Animate the button
-function animationClick() {
-    newNoteButton.classList.add('animated', animationCSS)
-    setTimeout(() => {
-        newNoteButton.classList.remove('animated', animationCSS)
-    }, 1250)
+    // Animate the button
+    function animationClick() {
+        newNoteButton.classList.add('animated', animationCSS)
+        setTimeout(() => {
+            newNoteButton.classList.remove('animated', animationCSS)
+        }, 1250)
+        // Call func for animate the button
+        animationClick()
+    }
 }
