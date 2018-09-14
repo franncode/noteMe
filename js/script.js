@@ -2,6 +2,9 @@ let newNoteTitle = document.querySelector('#newNoteTitle');
 let newNoteBody = document.querySelector('#newNoteBody');
 let newNoteButton = document.querySelector('#newNoteButton');
 
+//  This save the actual empty Row
+let rowEmpty = 0
+
 // Choose a animation from "Animate CSS" to set
 let animationCSS = 'bounce'
 
@@ -10,7 +13,7 @@ newNoteButton.addEventListener('click', noteCreator)
 
 // Note creator
 function noteCreator() {
-    if ((document.getElementsByClassName('card').length % 3 === 0) || (document.getElementsByClassName('card').length === 0)) {
+    if (document.getElementsByClassName('card').length % 3 === 0) {
         console.log('anda')
         // Create new Row
         var newRow = document.createElement('div')
@@ -24,11 +27,11 @@ function noteCreator() {
         // Create new Col and put on exists Row
         var newCol = document.createElement('div')
         newCol.classList.add('col-lg-4', 'col-md-12', 'mb-lg-0', 'mb-4')
-        var i = 0
+        
         while (document.getElementsByClassName('row-notes')[i].getElementsByClassName('col-notes').length === 3) {
-            i++
+            rowEmpty++
         }
-        document.getElementsByClassName('row-notes')[i].appendChild(newCol)
+        document.getElementsByClassName('row-notes')[rowEmpty].appendChild(newCol)
     }
 
     // Create new Card
@@ -39,11 +42,11 @@ function noteCreator() {
     newCardBody.classList.add('card-body')
     newCard.appendChild(newCardBody)
 
-   // Create new Title-Text-Card
-   let newTitleTextCard = document.createElement('h2')
-   newTitleTextCard.appendChild(document.createTextNode(newNoteTitle.value))
-   newTitleTextCard.classList.add('font-weight-bold', 'my-4')
-   newCardBody.appendChild(newTitleTextCard)
+    // Create new Title-Text-Card
+    let newTitleTextCard = document.createElement('h2')
+    newTitleTextCard.appendChild(document.createTextNode(newNoteTitle.value))
+    newTitleTextCard.classList.add('font-weight-bold', 'my-4')
+    newCardBody.appendChild(newTitleTextCard)
 
     // Create new Body-Text-Card
     let newBodyTextCard = document.createElement('p')
@@ -55,12 +58,14 @@ function noteCreator() {
     document.querySelector('#newNoteTitle').value = ''
     document.querySelector('#newNoteBody').value = ''
 
-    // Animate the button
-    function animationClick() {
-        newNoteButton.classList.add('animated', animationCSS)
-        setTimeout(() => {
-            newNoteButton.classList.remove('animated', animationCSS)
-        }, 1250)
-    }
+    // Call func for animate the button
     animationClick()
+}
+
+// Animate the button
+function animationClick() {
+    newNoteButton.classList.add('animated', animationCSS)
+    setTimeout(() => {
+        newNoteButton.classList.remove('animated', animationCSS)
+    }, 1250)
 }
