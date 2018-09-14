@@ -3,8 +3,7 @@ let newNoteTitle = document.querySelector('#newNoteTitle');
 let newNoteBody = document.querySelector('#newNoteBody');
 let newNoteButton = document.querySelector('#newNoteButton');
 
-//  This save the actual empty Row
-let rowEmpty = 0
+
 
 // Choose a animation from "Animate CSS" to set
 let animationCSS = 'bounce'
@@ -14,8 +13,9 @@ newNoteButton.addEventListener('click', noteCreator)
 
 // Note creator
 function noteCreator() {
+
+
     if (document.getElementsByClassName('card').length % 3 === 0) {
-        console.log('anda')
         // Create new Row
         var newRow = document.createElement('div')
         newRow.classList.add('row', 'row-notes')
@@ -28,8 +28,9 @@ function noteCreator() {
         // Create new Col and put on exists Row
         var newCol = document.createElement('div')
         newCol.classList.add('col-lg-4', 'col-md-12', 'mb-lg-0', 'mb-4')
-
-        while (document.getElementsByClassName('row-notes')[i].getElementsByClassName('col-notes').length === 3) {
+        //  This save the actual empty Row
+        let rowEmpty = 0
+        while (document.getElementsByClassName('row-notes')[rowEmpty].getElementsByClassName('col-notes').length === 3) {
             rowEmpty++
         }
         document.getElementsByClassName('row-notes')[rowEmpty].appendChild(newCol)
@@ -65,7 +66,7 @@ function noteCreator() {
         setTimeout(() => {
             newNoteButton.classList.remove('animated', animationCSS)
         }, 1250)
-        // Call func for animate the button
-        animationClick()
     }
+    // Call func for animate the button
+    animationClick()
 }
