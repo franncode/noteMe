@@ -15,6 +15,8 @@ let animationCSS = 'bounce'
 
 // Post new note
 newNoteButton.addEventListener('click', noteCreator)
+newNoteTitle.addEventListener('keypress', noteCreator)
+newNoteBody.addEventListener('keypress', noteCreator)
 
 // Delete note
 // newButtonCard.addEventListener('click', noteRemover)
