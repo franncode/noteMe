@@ -102,3 +102,51 @@ function noteRemover() {
     document.removeChild(document.getElementById(`card-${parseInt(cardNumberId)}`))
     // Add method remove to a button?
 }
+
+function hermosuraDeAlpaca(iteracionSecuenciasAdn, cantTiposDeHermosura) {
+
+    // Check argumentos iteracionSecuenciasAdn y cantTiposDeHermosura
+    if ((1 <= iteracionSecuenciasAdn && iteracionSecuenciasAdn <= 10 ^ 15) && (2 <= cantTiposDeHermosura && cantTiposDeHermosura <= 10 ^ 9)) {
+
+        // Inicio secuencia ADN de alpaca
+        let secuenciaAdn = 'A'
+        for (let i = 0; i < iteracionSecuenciasAdn; i++) {
+            // split secuenciaAdn
+            let arraySecuencia = secuenciaAdn.split('')
+            // recorrer arreglo y map cada indice
+            let arraySecuenciaMapeado = arraySecuencia.map(function (letra) {
+                switch (letra) {
+                    case 'A':
+                        return 'AL'
+                    case 'L':
+                        return 'PACA'
+                    case 'P':
+                        return 'CP'
+                    case 'C':
+                        return 'PC'
+                }
+            })
+            // join arraySecuenciaMapeado
+            secuenciaAdn = arraySecuenciaMapeado.join('')
+        }
+
+        // Busqueda de subcadenas ALPACA
+        let subcadenasAlpaca = 0
+        let position = 0
+        while (position < secuenciaAdn.length && position !== -1) {
+            if (secuenciaAdn.indexOf('ALPACA', position) !== -1) {
+                subcadenasAlpaca++
+                position = secuenciaAdn.indexOf('ALPACA', position) + 5
+            } else {
+                position = -1
+            }
+        }
+
+        return subcadenasAlpaca % cantTiposDeHermosura
+
+    } else {
+        return 'datos ingresados incorrectos'
+    }
+}
+
+document.getElementById('test').innerHTML = hermosuraDeAlpaca(234612846789231, 123456789)
